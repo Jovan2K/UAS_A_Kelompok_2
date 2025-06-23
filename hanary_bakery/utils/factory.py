@@ -1,4 +1,3 @@
-
 from entities.croissant import Croissant
 from entities.muffin import Muffin
 from entities.roti_manis import RotiManis
@@ -8,24 +7,29 @@ from entities.butter_cookies import ButterCookies
 def buat_produk():
     try:
         print("\nPilih jenis produk:")
-        print("1. Croissant")
-        print("2. Muffin")
-        print("3. Roti Manis")
-        print("4. Kue Kering")
-        print("5. Butter Cookies")
+        print("1. Roti Manis")
+        print("2. Croissant")
+        print("3. Roti Kering")
 
-        pilihan = input("Masukkan pilihan (1-5): ").strip()
+        pilihan = input("Masukkan pilihan (1-3): ").strip()
 
-        class_map = {
-            "1": Croissant,
-            "2": Muffin,
-            "3": RotiManis,
-            "4": KueKering,
-            "5": ButterCookies,
-        }
-
-        cls = class_map.get(pilihan)
-        if not cls:
+        if pilihan == "1":
+            cls = RotiManis
+        elif pilihan == "2":
+            cls = Croissant
+        elif pilihan == "3":
+            print("\n-- Roti Kering --")
+            print("1. Butter Cookies")
+            print("2. Muffin")
+            sub_pilihan = input("Pilih sub-jenis roti kering (1-2): ").strip()
+            if sub_pilihan == "1":
+                cls = ButterCookies
+            elif sub_pilihan == "2":
+                cls = Muffin
+            else:
+                print("Sub-pilihan tidak valid.")
+                return None
+        else:
             print("Pilihan tidak valid.")
             return None
 
