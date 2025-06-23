@@ -14,9 +14,9 @@ class Produk(ABC):
     def tampilkan_data(self):
         print(f"\n[INFO PRODUK: {self.nama}]")
         print(f"Kode Produk     : {self.kode}")
-        print(f"Biaya Produksi  : Rp{self.biaya_produksi}")
+        print(f"Biaya Produksi  : Rp{self.biaya_produksi} /pcs")
         print(f"Jumlah Produksi : {self.jumlah_produksi}")
-        print(f"Harga Jual      : Rp{self.harga_jual}")
+        print(f"Harga Jual      : Rp{self.harga_jual} /pcs")
         print("Bahan Baku:")
         table = [[bahan, jumlah] for bahan, jumlah in self.bahan_baku.items()]
         print(tabulate(table, headers=["Bahan", "Jumlah"], tablefmt="grid"))
