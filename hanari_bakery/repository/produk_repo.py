@@ -1,5 +1,9 @@
+# Di produk_repo.py
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from mockup_data import produk_list
 
-produk_list = []
 
 def tambah_produk(produk):
     produk_list.append(produk)
