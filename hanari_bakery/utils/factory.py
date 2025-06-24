@@ -48,8 +48,8 @@ def buat_produk():
             except ValueError:
                 print("Jumlah harus berupa angka!")
 
-        biaya = float(input("Biaya produksi per pcs (Rp): "))
         jumlah_produksi = int(input("Jumlah produksi: "))
+        biaya = float(input("Biaya produksi per pcs (Rp): "))
         harga = float(input("Harga jual per pcs (Rp): "))
 
         return cls(nama, kode, bahan_baku, biaya, jumlah_produksi, harga)
