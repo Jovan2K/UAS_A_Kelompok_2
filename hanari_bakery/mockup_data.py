@@ -3,8 +3,8 @@ from entities.butter_cookies import ButterCookies
 from entities.croissant import Croissant
 from entities.kue_kering import KueKering
 from entities.muffin import Muffin
+from data import produk_list
 
-produk_list =[]
 #mockup masbro 
 produk_list.append(
     RotiManis(

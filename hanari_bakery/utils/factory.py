@@ -3,6 +3,7 @@ from entities.muffin import Muffin
 from entities.roti_manis import RotiManis
 from entities.kue_kering import KueKering
 from entities.butter_cookies import ButterCookies
+from data import produk_list
 
 def buat_produk():
     try:
